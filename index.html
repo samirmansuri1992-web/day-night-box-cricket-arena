@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101b2a"><meta name="description" content="Book Day & Night Box Cricket Arena slots online.">
+<title>Day & Night Box Cricket Arena</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="logoMark"><span class="sun">☀</span><span class="moon">☾</span></div>
+  <div class="brand">DAY <em>&</em> NIGHT</div>
+  <div class="brandSub">BOX CRICKET ARENA</div>
+  <p>Near ZK FARM · Riverfront</p>
+  <a class="call" href="https://wa.me/919979692444">WhatsApp: 9979692444</a>
+</header>
+<main>
+  <section class="card">
+    <div class="sectionHead"><div><span class="eyebrow">CUSTOMER BOOKING</span><h1>Book your cricket time</h1></div><span class="liveDot">● SLOT BOOKING</span></div>
+    <label>Booking start date<input id="startDate" type="date"></label>
+    <div class="rateGrid">
+      <div><b>DAY RATE</b><strong>₹500 <small>/ hour</small></strong><span>6:00 AM – 6:00 PM</span></div>
+      <div><b>NIGHT RATE</b><strong>₹1,200 <small>/ hour</small></strong><span>6:00 PM – 6:00 AM</span></div>
+    </div>
+    <h2>Choose a standard slot</h2>
+    <p class="muted">Select a 2-hour slot, or create your own custom timing below.</p>
+    <div id="standardSlots" class="slots"></div>
+    <div class="divider"><span>OR CUSTOM BOOKING</span></div>
+    <div class="formGrid">
+      <label>Start time<input id="customStart" type="time" value="10:00"></label>
+      <label>End date<input id="endDate" type="date"></label>
+      <label>End time<input id="customEnd" type="time" value="12:00"></label>
+    </div>
+    <button id="customBtn" class="btn secondary">Check custom time & price</button>
+    <div id="quote" class="quote hidden"></div>
+    <div id="customerDetails" class="hidden">
+      <h2>Your details</h2>
+      <div class="formGrid">
+        <label>Full name<input id="customerName" maxlength="70" placeholder="Your name"></label>
+        <label>Mobile number<input id="customerPhone" inputmode="numeric" maxlength="10" placeholder="10-digit number"></label>
+      </div>
+      <label>Notes (optional)<textarea id="customerNote" rows="2" placeholder="Any request"></textarea></label>
+      <div id="paymentBox" class="payment">
+        <h3>PhonePe payment QR</h3><img src="phonepe-qr.jpeg" alt="PhonePe payment QR">
+        <p>Pay after checking the amount. Payment is verified manually by the arena. Your booking remains pending until the admin confirms it.</p>
+      </div>
+      <button id="submitBooking" class="btn">Send booking request on WhatsApp</button>
+      <p class="small muted">Do not assume a slot is confirmed until you receive confirmation from the arena.</p>
+    </div>
+  </section>
+
+  <section class="card">
+    <span class="eyebrow">HOW PRICING WORKS</span><h2>Automatic day & night rates</h2>
+    <p>Day rate applies from 6 AM up to 6 PM. Night rate applies from 6 PM up to 6 AM. A custom booking crossing either boundary is split and calculated at both rates.</p>
+    <div class="example"><b>Example: 5 PM – 8 PM</b><strong>₹2,200</strong><span>1 hour × ₹500 + 2 hours × ₹1,200</span></div>
+  </section>
+
+  <section class="card adminCard">
+    <span class="eyebrow">ARENA MANAGEMENT</span><h2>Admin panel</h2>
+    <div id="adminLogin">
+      <div class="formGrid">
+        <label>Admin email<input id="adminEmail" type="email" placeholder="Admin email"></label>
+        <label>Password<input id="adminPassword" type="password" placeholder="Password"></label>
+      </div>
+      <button id="adminLoginBtn" class="btn secondary">Admin sign in</button>
+      <p class="small muted">Admin sign-in becomes active after Firebase setup and creating an admin user.</p>
+    </div>
+    <div id="adminPanel" class="hidden">
+      <div class="adminToolbar"><b id="adminIdentity"></b><button id="logoutBtn" class="btn danger smallBtn">Sign out</button></div>
+      <label>View date<input id="adminDate" type="date"></label>
+      <div id="adminBookings"></div>
+      <h3>Payment QR</h3><p class="small muted">The supplied PhonePe QR is included. Replace phonepe-qr.jpeg in the app folder to change it.</p>
+      <button id="exportBtn" class="btn secondary">Export bookings CSV</button>
+    </div>
+  </section>
+  <div id="notice" class="notice hidden" role="status"></div>
+</main>
+<footer>DAY & NIGHT BOX CRICKET ARENA · Near ZK FARM, Riverfront</footer>
+<script type="module" src="app.js"></script>
+</body></html>
